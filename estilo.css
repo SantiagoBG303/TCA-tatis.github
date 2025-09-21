@@ -1,0 +1,137 @@
+/* Fuente bonita */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe6f0, #e6f0ff, #fef6e4);
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #ff66b2, #8a2be2, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #6a1b9a;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-left: 6px solid #ff66b2;
+  padding-left: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #fce4ec;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Curiosidades */
+.curiosidades {
+  text-align: center;
+  background: #f0f4ff;
+}
+
+.curiosidades p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.curiosidades button {
+  background: linear-gradient(90deg, #ff66b2, #ffb347);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.curiosidades button:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ffe6f0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  border-top: 3px solid #ffb347;
+}
+
+
+
+
+/* Contenedor de los trastornos */
+.grid-trastornos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center; /* centra las tarjetas dentro del grid */
+}
+
+/* Tarjetas */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  max-width: 350px; /* controla el ancho máximo para que no se estiren demasiado */
+  width: 100%; /* asegura que ocupen el espacio de la columna */
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
