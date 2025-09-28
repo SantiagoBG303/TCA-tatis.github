@@ -410,6 +410,10 @@ section button::before {
   color: #fff;
   background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
   -webkit-background-clip: text;
+  background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8),
                0 0 15px rgba(255, 107, 107, 0.7),
