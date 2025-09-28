@@ -94,7 +94,7 @@
     </ul>
     <img src="anorexia_tratamiento.png" alt="Imagen ilustrativa sobre tratamiento de anorexia">
 
-    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
+    <button onclick="mostrarPagina('inicio', true)">Volver al inicio</button>
   </section>
 
   <!-- Página: Bulimia -->
@@ -130,7 +130,7 @@
     </ul>
     <img src="bulimia_tratamiento.png" alt="Imagen sobre tratamiento de bulimia">
 
-    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
+    <button onclick="mostrarPagina('inicio', true)">Volver al inicio</button>
   </section>
 
   <!-- Página: Trastorno por Atracón -->
@@ -166,7 +166,7 @@
     </ul>
     <img src="atracon_tratamiento.png" alt="Imagen sobre tratamiento del atracón">
 
-    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
+    <button onclick="mostrarPagina('inicio', true)">Volver al inicio</button>
   </section>
 
   <!-- Página: Pica -->
@@ -202,9 +202,33 @@
     </ul>
     <img src="pica_tratamiento.png" alt="Imagen sobre tratamiento de Pica">
 
-    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
+    <button onclick="mostrarPagina('inicio', true)">Volver al inicio</button>
   </section>
 
-  <script src="script.js"></script>
+  <script>
+    function mostrarPagina(id, volver = false) {
+      // Ocultar todas las páginas
+      const paginas = document.querySelectorAll('.pagina');
+      paginas.forEach(pagina => pagina.classList.remove('activa'));
+
+      // Mostrar la página seleccionada
+      const paginaActiva = document.getElementById(id);
+      paginaActiva.classList.add('activa');
+
+      if (id === "inicio" && volver) {
+        // Cuando se vuelve al inicio, ir a "Explora los trastornos"
+        const explorar = paginaActiva.querySelector(".botones");
+        if (explorar) {
+          explorar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } else {
+        // En cualquier otro caso, ir al inicio del h1
+        const titulo = paginaActiva.querySelector('h1');
+        if (titulo) {
+          titulo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+  </script>
 </body>
 </html>

@@ -397,3 +397,22 @@ section button::before {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+
+/* Estilo solo para los títulos principales de cada trastorno */
+#anorexia h1,
+#bulimia h1,
+#atracon h1,
+#pica h1 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8),
+               0 0 15px rgba(255, 107, 107, 0.7),
+               0 0 25px rgba(72, 219, 251, 0.7);
+  margin-bottom: 20px;
+}
