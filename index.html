@@ -6,117 +6,205 @@
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+  <!-- Página principal -->
+  <section id="inicio" class="pagina activa">
+    <header>
+      <h1>Trastornos de la Conducta Alimentaria (TCA)</h1>
+      <p class="intro">Alteraciones en la relación con la comida, la imagen corporal y la salud.</p>
+      <img src="tca_inicio.png" alt="Ilustración general de los TCA">
+    </header>
 
-  <header>
-    <h1>Trastornos de la Conducta Alimentaria (TCA)</h1>
-    <p class="intro">
-      Alteraciones en la relación con la comida, la imagen corporal y la salud.
-    </p>
-  </header>
+    <main>
+      <h2>Definición general</h2>
+      <p>Los TCA son trastornos mentales que afectan la forma en que las personas se alimentan y perciben su cuerpo. Pueden dañar la salud física, emocional y social.</p>
+      <img src="definicion.png" alt="Imagen ilustrativa sobre definición de TCA">
 
-  <!-- Definición -->
-  <section>
-    <h2>Definición</h2>
-    <p>
-      Los TCA son trastornos mentales que afectan la forma en que las personas se alimentan
-      y perciben su cuerpo. Pueden dañar la salud física, emocional y social.
-    </p>
-    <ul>
-      <li>Ejemplos: Anorexia, Bulimia, Trastorno por Atracón.</li>
-      <li>Impactan la vida diaria: relaciones, estudios, salud.</li>
-    </ul>
-    <img src="definicion.png.png" alt="ilustración definición TCA">
-  </section>
+      <h2>Fisiopatología</h2>
+      <p>Los trastornos de la conducta alimentaria producen una interacción compleja entre factores biológicos, psicológicos y sociales.  
+      A nivel fisiológico, generan alteraciones hormonales (como la leptina, serotonina y dopamina), cambios en el metabolismo y en el sistema nervioso que afectan la regulación del apetito, la saciedad y el control de impulsos.  
+      Estos desequilibrios explican la persistencia de los síntomas y las complicaciones médicas.</p>
+      <img src="fisiopatologia.png" alt="Gráfico de fisiopatología de TCA">
 
-  <!-- Trastornos principales -->
-  <section>
-    <h2>Trastornos principales</h2>
-    <div class="grid-trastornos">
-      <div class="card">
-        <h3>Anorexia nerviosa</h3>
-        <p><strong>Definición:</strong> Restricción extrema de la ingesta de alimentos por miedo a ganar peso.</p>
-        <p><strong>Síntomas:</strong> Pérdida de peso significativa, distorsión de la imagen corporal, conductas restrictivas.</p>
-        <p><strong>Tratamiento:</strong> Terapia psicológica, apoyo nutricional y en algunos casos medicación.</p>
+      <h2>Factores de riesgo</h2>
+      <ul>
+        <li>Presión social y estereotipos de belleza.</li>
+        <li>Baja autoestima o perfeccionismo.</li>
+        <li>Antecedentes familiares de TCA.</li>
+        <li>Deportes o actividades que exigen cierto peso.</li>
+      </ul>
+      <img src="factores_riesgo.png" alt="Imagen ilustrativa de factores de riesgo">
+
+      <h2>Prevención y ayuda</h2>
+      <ul>
+        <li>Fomentar imagen corporal positiva.</li>
+        <li>Buscar ayuda profesional a tiempo.</li>
+        <li>Apoyo familiar y social es fundamental.</li>
+      </ul>
+      <img src="prevencion.png" alt="Imagen de prevención y apoyo en TCA">
+
+      <h2>Explora los trastornos</h2>
+      <div class="botones">
+        <button onclick="mostrarPagina('anorexia')">Anorexia</button>
+        <button onclick="mostrarPagina('bulimia')">Bulimia</button>
+        <button onclick="mostrarPagina('atracon')">Trastorno por Atracón</button>
+        <button onclick="mostrarPagina('pica')">Pica</button>
       </div>
-      <div class="card">
-        <h3>Bulimia nerviosa</h3>
-        <p><strong>Definición:</strong> Episodios recurrentes de atracones seguidos de conductas compensatorias como vómitos o laxantes.</p>
-        <p><strong>Síntomas:</strong> Comer en exceso en poco tiempo, sentimientos de culpa, uso de purgas.</p>
-        <p><strong>Tratamiento:</strong> Terapia cognitivo-conductual, apoyo nutricional y acompañamiento médico.</p>
-      </div>
-      <div class="card">
-        <h3>Trastorno por atracón</h3>
-        <p><strong>Definición:</strong> Ingesta recurrente de grandes cantidades de comida sin conductas compensatorias.</p>
-        <p><strong>Síntomas:</strong> Comer rápido, hasta sentirse incómodo, sentimientos de vergüenza.</p>
-        <p><strong>Tratamiento:</strong> Terapia psicológica, educación nutricional y en algunos casos fármacos.</p>
-      </div>
-      <div class="card">
-        <h3>Pica</h3>
-        <p><strong>Definición:</strong> Ingesta persistente de sustancias no nutritivas como tierra, papel o tiza.</p>
-        <p><strong>Síntomas:</strong> Consumo de objetos o sustancias no alimenticias, riesgo de intoxicación o problemas digestivos.</p>
-        <p><strong>Tratamiento:</strong> Evaluación médica, intervención psicológica y tratamiento de déficits nutricionales.</p>
-      </div>
-    </div>
+    </main>
+
+    <!-- Footer SOLO en la página principal -->
+    <footer class="pie-video">
+      <p>📽️ <strong>VIDEO ANIMADO </strong> </p>
+      <a href="https://www.youtube.com/watch?v=eE6NS5IDFt4" target="_blank" rel="noopener noreferrer">
+       OPRIME AQUI PARA VERLO :)
+      </a>
+    </footer>
   </section>
 
-  <!-- Síntomas -->
-  <section>
-    <h2>Síntomas</h2>
+  <!-- Página: Anorexia -->
+  <section id="anorexia" class="pagina">
+    <h1>Anorexia Nerviosa</h1>
+    <img src="anorexia.png" alt="Imagen representativa de anorexia">
+
+    <h2>¿Qué es?</h2>
+    <p>La anorexia es un trastorno caracterizado por restricción extrema de la ingesta de alimentos debido al miedo a ganar peso.</p>
+    <img src="anorexia_quees.png" alt="Ilustración sobre la definición de anorexia">
+
+    <h2>Signos y síntomas</h2>
     <ul>
-      <li>Cambios de peso repentinos.</li>
-      <li>Obsesión por calorías o por el cuerpo.</li>
-      <li>Rutinas rígidas: ayunos, atracones o purgas.</li>
-      <li>Evitar comer con otros; cambios de humor.</li>
+      <li>Pérdida de peso significativa.</li>
+      <li>Distorsión de la imagen corporal.</li>
+      <li>Ejercicio excesivo, dietas estrictas.</li>
     </ul>
-    <img src="sintoma3.png" alt="plato vacío o con comida mínima">
-  </section>
+    <img src="anorexia_sintomas.png" alt="Imagen de los síntomas de la anorexia">
 
-  <!-- Factores de riesgo -->
-  <section>
-    <h2>Factores de riesgo</h2>
+    <h2>Consecuencias</h2>
     <ul>
-      <li>Presión social y estereotipos de belleza.</li>
-      <li>Baja autoestima o perfeccionismo.</li>
-      <li>Antecedentes familiares de TCA.</li>
-      <li>Deportes o actividades que exigen cierto peso.</li>
+      <li>Daño en órganos vitales.</li>
+      <li>Problemas cardíacos y hormonales.</li>
+      <li>Desnutrición severa.</li>
     </ul>
-    <img src="factores riesgo.png" alt="influencia redes sociales">
-  </section>
+    <img src="anorexia_consecuencias.png" alt="Ilustración sobre consecuencias de la anorexia">
 
-  <!-- Prevención y ayuda -->
-  <section>
-    <h2>Prevención y ayuda</h2>
+    <h2>Tratamiento</h2>
+    <p>En hospitales se trabaja de forma multidisciplinar:</p>
     <ul>
-      <li>Fomentar imagen corporal positiva.</li>
-      <li>Buscar ayuda profesional a tiempo.</li>
-      <li>Apoyo familiar y social es fundamental.</li>
+      <li>Terapia psicológica.</li>
+      <li>Apoyo nutricional.</li>
+      <li>Supervisión médica y, en casos graves, hospitalización.</li>
     </ul>
-    <img src="ayuda.png" alt="profesional de salud apoyando paciente">
+    <img src="anorexia_tratamiento.png" alt="Imagen ilustrativa sobre tratamiento de anorexia">
+
+    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
   </section>
 
-  <!-- Cierre -->
-  <section>
-    <h2>Resumen</h2>
+  <!-- Página: Bulimia -->
+  <section id="bulimia" class="pagina">
+    <h1>Bulimia Nerviosa</h1>
+    <img src="bulimia.png" alt="Imagen representativa de bulimia">
+
+    <h2>¿Qué es?</h2>
+    <p>La bulimia se caracteriza por episodios de atracones seguidos de conductas compensatorias (vómitos, laxantes, ayunos).</p>
+    <img src="bulimia_quees.png" alt="Ilustración sobre definición de bulimia">
+
+    <h2>Signos y síntomas</h2>
     <ul>
-      <li>Afectan a todas las edades y géneros.</li>
-      <li>La combinación de tratamiento médico y psicológico funciona mejor.</li>
-      <li>Con apoyo y detección temprana, la recuperación es posible.</li>
+      <li>Comer en exceso en poco tiempo.</li>
+      <li>Sentimientos de culpa.</li>
+      <li>Uso de purgas frecuentes.</li>
     </ul>
-    <img src="ultimo.png" alt="imagen cierre">
+    <img src="bulimia_sintomas.png" alt="Imagen de síntomas de bulimia">
+
+    <h2>Consecuencias</h2>
+    <ul>
+      <li>Daño dental por vómitos frecuentes.</li>
+      <li>Problemas digestivos.</li>
+      <li>Alteraciones metabólicas.</li>
+    </ul>
+    <img src="bulimia_consecuencias.png" alt="Ilustración sobre consecuencias de bulimia">
+
+    <h2>Tratamiento</h2>
+    <ul>
+      <li>Terapia cognitivo-conductual.</li>
+      <li>Apoyo nutricional.</li>
+      <li>Acompañamiento médico especializado.</li>
+    </ul>
+    <img src="bulimia_tratamiento.png" alt="Imagen sobre tratamiento de bulimia">
+
+    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
   </section>
 
-  <!-- Sección de Curiosidades -->
-  <section class="curiosidades">
-    <h2>Dato curioso</h2>
-    <p id="dato-curioso">Haz clic en el botón para descubrir un dato.</p>
-    <button onclick="mostrarDato()">Ver dato</button>
+  <!-- Página: Trastorno por Atracón -->
+  <section id="atracon" class="pagina">
+    <h1>Trastorno por Atracón</h1>
+    <img src="atracon.png" alt="Imagen representativa del trastorno por atracón">
+
+    <h2>¿Qué es?</h2>
+    <p>Se caracteriza por ingesta excesiva de grandes cantidades de comida sin conductas compensatorias.</p>
+    <img src="atracon_quees.png" alt="Ilustración sobre definición de atracón">
+
+    <h2>Signos y síntomas</h2>
+    <ul>
+      <li>Comer rápido y hasta sentirse incómodo.</li>
+      <li>Sentimientos de vergüenza.</li>
+      <li>Falta de control durante los episodios.</li>
+    </ul>
+    <img src="atracon_sintomas.png" alt="Imagen de síntomas del atracón">
+
+    <h2>Consecuencias</h2>
+    <ul>
+      <li>Sobrepeso u obesidad.</li>
+      <li>Problemas metabólicos.</li>
+      <li>Afectación emocional y social.</li>
+    </ul>
+    <img src="atracon_consecuencias.png" alt="Ilustración sobre consecuencias del atracón">
+
+    <h2>Tratamiento</h2>
+    <ul>
+      <li>Terapia psicológica.</li>
+      <li>Educación nutricional.</li>
+      <li>Medicamentos en algunos casos.</li>
+    </ul>
+    <img src="atracon_tratamiento.png" alt="Imagen sobre tratamiento del atracón">
+
+    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
   </section>
 
-  <footer>
-    <p>Presentación creada con fines educativos</p>
-  </footer>
+  <!-- Página: Pica -->
+  <section id="pica" class="pagina">
+    <h1>Pica</h1>
+    <img src="pica.png" alt="Imagen representativa de Pica">
 
-  <!-- Enlace al JS -->
+    <h2>¿Qué es?</h2>
+    <p>Consiste en la ingesta persistente de sustancias no nutritivas como tierra, papel o tiza.</p>
+    <img src="pica_quees.png" alt="Ilustración sobre definición de Pica">
+
+    <h2>Signos y síntomas</h2>
+    <ul>
+      <li>Consumo de objetos no alimenticios.</li>
+      <li>Riesgo de intoxicación.</li>
+      <li>Problemas digestivos.</li>
+    </ul>
+    <img src="pica_sintomas.png" alt="Imagen sobre síntomas de Pica">
+
+    <h2>Consecuencias</h2>
+    <ul>
+      <li>Bloqueos intestinales.</li>
+      <li>Deficiencias nutricionales.</li>
+      <li>Riesgo de infecciones.</li>
+    </ul>
+    <img src="pica_consecuencias.png" alt="Ilustración sobre consecuencias de Pica">
+
+    <h2>Tratamiento</h2>
+    <ul>
+      <li>Evaluación médica completa.</li>
+      <li>Intervención psicológica.</li>
+      <li>Corrección de deficiencias nutricionales.</li>
+    </ul>
+    <img src="pica_tratamiento.png" alt="Imagen sobre tratamiento de Pica">
+
+    <button onclick="mostrarPagina('inicio')">Volver al inicio</button>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>

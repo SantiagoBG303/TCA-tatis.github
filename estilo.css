@@ -1,137 +1,399 @@
-/* Fuente bonita */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+/* ---------------------------------------------------
+   FUENTES
+--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap');
 
-body {
-  font-family: 'Poppins', sans-serif;
+/* ---------------------------------------------------
+   RESET GLOBAL
+--------------------------------------------------- */
+* {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ffe6f0, #e6f0ff, #fef6e4);
-  color: #333;
-  line-height: 1.6;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #ffe0f0, #e0f7fa, #fff3e0, #e8f5e9);
+  background-size: 400% 400%;
+  animation: pastelBackground 20s ease infinite;
+}
+
+/* Animación de fondo degradado */
+@keyframes pastelBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------------------------------------------------
+   DECORACIONES DE FONDO (círculos flotantes)
+--------------------------------------------------- */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  opacity: 0.35;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+  background: #ffb3ba;
+  animation: float1 20s ease-in-out infinite;
+}
+
+body::after {
+  width: 500px;
+  height: 500px;
+  bottom: -120px;
+  right: -150px;
+  background: #bae1ff;
+  animation: float2 25s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(50px, 50px) scale(1.2); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-60px, -40px) scale(1.1); }
+}
+
+/* ---------------------------------------------------
+   ENCABEZADO PRINCIPAL
+--------------------------------------------------- */
 header {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px 40px;
+  position: relative;
 }
 
-h1 {
-  font-size: 3rem;
-  background: linear-gradient(90deg, #ff66b2, #8a2be2, #ffb347);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  margin-bottom: 10px;
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+
+  /* Efecto neón FUERTE */
+  text-shadow: 
+    0 0 8px #ff4da6,
+    0 0 16px #ff4da6,
+    0 0 30px #ff1aff,
+    0 0 45px #ff66b2,
+    0 0 60px #ff3399,
+    0 0 80px #ff1ac6;
+
+  animation: neonGlowStrong 2s ease-in-out infinite alternate;
 }
 
-.intro {
-  font-size: 1.2rem;
-  color: #444;
-  max-width: 800px;
-  margin: 0 auto;
+@keyframes neonGlowStrong {
+  from {
+    text-shadow: 
+      0 0 6px #ff66cc,
+      0 0 14px #ff66cc,
+      0 0 28px #ff4da6,
+      0 0 42px #ff1aff,
+      0 0 55px #ff3399,
+      0 0 75px #ff1ac6;
+    color: #fff;
+  }
+  to {
+    text-shadow: 
+      0 0 10px #ff1aff,
+      0 0 20px #ff1aff,
+      0 0 40px #ff66b2,
+      0 0 60px #ff4da6,
+      0 0 90px #ff3399,
+      0 0 120px #ff66cc;
+    color: #ffe6f9;
+  }
 }
 
+header .intro {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------
+   SECCIONES GENERALES
+--------------------------------------------------- */
 section {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 0 auto 50px;
   padding: 30px;
-  background: #fff;
+  position: relative;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  display: none;
 }
 
-section:hover {
-  transform: translateY(-5px);
+section.activa {
+  display: block;
+  animation: fadeIn 0.9s ease;
 }
 
-h2 {
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------
+   SUBTÍTULOS GENERALES (Página principal)
+--------------------------------------------------- */
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
   color: #6a1b9a;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  border-left: 6px solid #ff66b2;
-  padding-left: 10px;
+  text-shadow: 0 0 6px #ba68c8, 0 0 12px #ab47bc, 0 0 18px #8e24aa;
+  animation: glowSubtitle 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowSubtitle {
+  from {
+    text-shadow: 0 0 6px #ba68c8, 0 0 12px #ab47bc, 0 0 18px #8e24aa;
+  }
+  to {
+    text-shadow: 0 0 10px #e1bee7, 0 0 20px #ba68c8, 0 0 30px #9c27b0;
+  }
+}
+
+/* ---------------------------------------------------
+   SUBTÍTULOS POR SECCIÓN ESPECÍFICA
+--------------------------------------------------- */
+#anorexia h2 {
+  color: #e91e63;
+  text-shadow: 0 0 8px #ff80ab, 0 0 15px #f50057;
+}
+
+#bulimia h2 {
+  color: #3f51b5;
+  text-shadow: 0 0 8px #9fa8da, 0 0 15px #303f9f;
+}
+
+#atracon h2 {
+  color: #009688;
+  text-shadow: 0 0 8px #80cbc4, 0 0 15px #004d40;
+}
+
+#pica h2 {
+  color: #ff9800;
+  text-shadow: 0 0 8px #ffcc80, 0 0 15px #e65100;
+}
+
+/* ---------------------------------------------------
+   CONTENIDO DE TEXTO
+--------------------------------------------------- */
+section p, section ul {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  background: rgba(255,255,255,0.85);
+  padding: 18px 22px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+section p::before, section ul::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  border-radius: 15px;
+  z-index: -1;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 300% 300%;
+  animation: borderFlow 10s linear infinite;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 ul li {
-  background: #fce4ec;
   margin: 8px 0;
-  padding: 10px;
-  border-radius: 10px;
+  padding-left: 25px;
+  position: relative;
 }
 
-img {
+ul li::before {
+  content: "✿";
+  position: absolute;
+  left: 0;
+  color: #ff7eb9;
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------
+   IMÁGENES COMO TARJETAS
+--------------------------------------------------- */
+section img {
   display: block;
-  margin: 20px auto;
-  max-width: 300px;
+  max-width: 100%;
+  margin: 25px auto;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: #fff;
+  padding: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Curiosidades */
-.curiosidades {
-  text-align: center;
-  background: #f0f4ff;
+section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-.curiosidades p {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+/* ---------------------------------------------------
+   BOTONES
+--------------------------------------------------- */
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 25px;
 }
 
-.curiosidades button {
-  background: linear-gradient(90deg, #ff66b2, #ffb347);
+button {
+  padding: 14px 28px;
   border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
   font-size: 1rem;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.curiosidades button:hover {
-  transform: scale(1.1);
+button::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 200%; height: 100%;
+  background: linear-gradient(270deg, #891216, #000000, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: btnAnim 8s ease infinite;
+  z-index: -1;
 }
 
-/* Footer */
-footer {
+@keyframes btnAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+section button {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 16px 32px;
+  border-radius: 20px;
+}
+
+section button::before {
+  background: linear-gradient(270deg, #a18cd1, #fbc2eb, #ed3805, #000000);
+}
+
+/* ---------------------------------------------------
+   DIFERENTES PÁGINAS (COLORES DE FONDO PASTEL)
+--------------------------------------------------- */
+#anorexia { background: rgba(255, 230, 240, 0.7); }
+#bulimia { background: rgba(230, 240, 255, 0.7); }
+#atracon { background: rgba(230, 255, 240, 0.7); }
+#pica    { background: rgba(255, 250, 230, 0.7); }
+
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+/* ---------- PIE DE PÁGINA / VIDEO (MEJORADO) ---------- */
+.pie-video {
   text-align: center;
-  padding: 20px;
-  background: #ffe6f0;
-  font-size: 0.9rem;
-  margin-top: 40px;
-  border-top: 3px solid #ffb347;
+  padding: 40px 20px;  /* más espacio */
+  background: linear-gradient(135deg, #ffe0f0, #e0f7fa, #fff3e0, #e8f5e9);
+  background-size: 300% 300%;
+  animation: pastelFooter 12s ease infinite;
+  margin-top: 60px;
+  border-top: 3px solid #ff7eb9;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.15);
 }
 
-
-
-
-/* Contenedor de los trastornos */
-.grid-trastornos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-items: center; /* centra las tarjetas dentro del grid */
+.pie-video p {
+  font-size: 1.5rem;   /* más grande */
+  color: #333;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-/* Tarjetas */
-.card {
-  background: #fff;
+.pie-video a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease-in-out;
-  max-width: 350px; /* controla el ancho máximo para que no se estiren demasiado */
-  width: 100%; /* asegura que ocupen el espacio de la columna */
+  background: linear-gradient(90deg, #ff7eb9, #ff65a3, #7afcff);
+  background-size: 300% 300%;
+  animation: btnShine 6s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
 }
 
-.card:hover {
-  transform: scale(1.03);
+.pie-video a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Animaciones */
+@keyframes pastelFooter {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes btnShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
